@@ -1,3 +1,4 @@
+Kránicz Máté
 <<<<<<< HEAD
 Káldy Kristóf
 >>>>>>> b820376caad784c2ddc314f9ec0a6a92531531dc
