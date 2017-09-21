@@ -1,4 +1,3 @@
-Káldy Kristóf
 0. Why to use GIT (version control system)
 https://www.youtube.com/watch?v=DqtZUvmPmo4&index=1&list=PLhW3qG5bs-L8OlICbNX9u4MZ3rAt5c5GG
 
@@ -22,7 +21,6 @@ https://www.youtube.com/watch?v=Ft2LXlaSEfs
 
 7. Git and GitHub Beginner Tutorial 7 - Git Tags - what, why, when and how
 https://www.youtube.com/watch?v=govmXpDGLpo
-
 
 1.1: Introduction - Git and GitHub for Poets
 https://www.youtube.com/watch?v=BCQHnlnPusY
