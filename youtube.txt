@@ -1,9 +1,6 @@
 Kránicz Máté
-<<<<<<< HEAD
 Káldy Kristóf
->>>>>>> b820376caad784c2ddc314f9ec0a6a92531531dc
-=======
->>>>>>> 706a3bae40aed79a61b3db7ed85b5b03ba96c683
+
 0. Why to use GIT (version control system)
 https://www.youtube.com/watch?v=DqtZUvmPmo4&index=1&list=PLhW3qG5bs-L8OlICbNX9u4MZ3rAt5c5GG
 
