@@ -3,7 +3,7 @@ Visual Studio Code fejlesztői környezettel, TypeScript nyelven Node.js-el a sz
 mivel fájlokat kell írni-olvasni.
 A csoport tagja:
 - Káldy Kristóf (kaldykristof)
-- XY2
+- Kránicz Máté (kr-mate)
 - XY3
 
 VS Code + TypeScript + Node.js + Git
