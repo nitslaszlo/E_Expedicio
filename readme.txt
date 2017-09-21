@@ -4,7 +4,7 @@ mivel fájlokat kell írni-olvasni.
 A csoport tagja:
 - Káldy Kristóf (kaldykristof)
 - Kránicz Máté (kr-mate)
-- XY3
+- Fazekas Bence (bencefazekas)
 
 VS Code + TypeScript + Node.js + Git
 =====================================
