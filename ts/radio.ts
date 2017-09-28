@@ -6,6 +6,10 @@ export class Radio {
          if (szo[i] < "0" || szo[i] > "9") valasz = false;
       }
       return valasz;
+  }
+  
+   static Main(): void {
+     const v: Vétel[] = [];
    }
 
 }
