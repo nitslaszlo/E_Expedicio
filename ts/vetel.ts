@@ -17,7 +17,7 @@ export class Vetel {
       }
       try {
          let x: string;
-         x = "A megfigyelt egyedek száma:" + ((m[0]) + (m[1]));
+         x = "A megfigyelt egyedek száma: " + ((m[0]) + (m[1]));
          return x;
       }
       catch (Error) {
