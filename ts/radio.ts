@@ -1,3 +1,5 @@
+
+
 export class Radio {
    // függvény neve(paraméterezés:tipus,):fgv visszatérés típusa
    static szame(szo: string): boolean {
