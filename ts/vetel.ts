@@ -3,5 +3,9 @@ export class Vetel {
    R: number;
    Ü: string;
 
-   constructor()
+   constructor(n: number, r: number, ü: string) {
+      this.N = n;
+      this.R = r;
+      this.Ü = ü;
+   }
 }
