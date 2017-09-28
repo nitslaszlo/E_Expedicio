@@ -15,6 +15,9 @@ export class Radio {
    static Main(): void { 
       const v: Vetel[] = [];
       const sorok: string[] = fs.readFileSync("veetel.txt").toString().split("\r\n");
+      for (let i: number = 1; i < sorok.length; i++) {
+         if (sorok[i].length > 0) v.push(new Vetel());
+      }
    }
 
 }
