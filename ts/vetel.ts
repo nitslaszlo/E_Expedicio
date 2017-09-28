@@ -8,4 +8,19 @@ export class Vetel {
       this.R = r;
       this.Ü = ü;
    }
+
+   public get MegfigyeltEgyedek(): string {
+      let m: string[];
+      m = this.Ü.split("/");
+      if ((m.length !== 2)) {
+         return "Nincs információ";
+      }
+      try {
+         return string.Format("A megfigyelt egyedek száma: {0}", (m[0]) +
+            (m[1]));
+      }
+      catch ( /*:Hiba*/) {
+         return "Nincs információ";
+      }
+   }
 }
