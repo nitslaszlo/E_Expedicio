@@ -16,10 +16,10 @@ export class Vetel {
          return "Nincs információ";
       }
       try {
-         return string.Format("A megfigyelt egyedek száma: {0}", (m[0]) +
+         return string("A megfigyelt egyedek száma: {0}", (m[0]) +
             (m[1]));
       }
-      catch ( /*:Hiba*/) {
+      catch (Error) {
          return "Nincs információ";
       }
    }
