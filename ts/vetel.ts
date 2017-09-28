@@ -16,8 +16,9 @@ export class Vetel {
          return "Nincs információ";
       }
       try {
-         return string.Format("A megfigyelt egyedek száma: {0}", (m[0]) +
-            (m[1]));
+         let x: string;
+         x = "A megfigyelt egyedek száma:" + ((m[0]) + (m[1]));
+         return x;
       }
       catch (Error) {
          return "Nincs információ";
