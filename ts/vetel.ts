@@ -9,6 +9,7 @@ export class Vetel {
       this.Ü = ü;
    }
 
+
    public get MegfigyeltEgyedek(): string {
       let m: string[];
       m = this.Ü.split("/");
