@@ -8,11 +8,6 @@ export class Radio {
       return valasz;
    }
 
-   static Main(): void {
-      const v: Vétel[] = [];
-   }
-
-
 }
 
 
