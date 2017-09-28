@@ -19,7 +19,7 @@ export class Vetel {
          return string.Format("A megfigyelt egyedek száma: {0}", (m[0]) +
             (m[1]));
       }
-      catch ( /*:Hiba*/) {
+      catch (Error) {
          return "Nincs információ";
       }
    }
