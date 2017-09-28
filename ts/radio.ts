@@ -10,7 +10,21 @@ export class Radio {
 
 
 
+   public get MegfigyeltEgyedek(): string {
+      let m: string[] = Ü.split[0].split(["/"][10]);
+      if ((m.length !== 2)) {
+         return "Nincs információ";
+      }
 
+      try {
+         return string.Format("A megfigyelt egyedek száma: {0}" +
+            (number.Parse(m[0]) + number.Parse(m[1])));
+      }
+      catch ( /*:Exception*/) {
+         return "Nincs információ";
+      }
+
+   }
 }
 
 
