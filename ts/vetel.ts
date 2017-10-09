@@ -23,11 +23,8 @@ export class Vetel {
    }
 
    public get MegfigyeltEgyedek(): string {
-      let m: string[];
-      m = this.Ü.split("/");
-      if ((m.length !== 2)) {
-         return "Nincs információ";
-      }
+      let m: string[] = this.Ü.split(" ")[0].split("/");
+      if ((m.length !== 2)) return "Nincs információ";
       try {
          let x: string;
          x = "A megfigyelt egyedek száma: " + ((m[0]) + (m[1]));
