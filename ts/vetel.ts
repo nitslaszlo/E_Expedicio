@@ -3,12 +3,24 @@ export class Vetel {
    R: number;
    Ü: string;
 
-   constructor(n: number, r: number, ü: string) {
-      this.N = n;
-      this.R = r;
+   constructor(m: string[], ü: string) {
+      this.N = parseInt(m[0]);
+      this.R = parseInt(m[1]);
       this.Ü = ü;
    }
 
+   public static op_Addition(v1: Vetel, v2: Vetel) : Vetel
+   {
+      let s: string = "";
+      for (let i: number = 0; i < 90; i++){
+         let ch: string = "#";
+         if (v1.Ü[i] != "#") ch = v1.Ü[i];
+         else if (v2.Ü[i] != "#") ch = v2.Ü[i];
+         s += ch;
+      }
+      const m: string[] = ["0", "0"];
+      return new Vetel(m, s);
+   }
 
    public get MegfigyeltEgyedek(): string {
       let m: string[];
