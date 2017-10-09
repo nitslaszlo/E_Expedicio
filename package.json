@@ -15,5 +15,8 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^8.0.26"
+  },
+  "dependencies": {
+    "linqts": "^1.10.0"
   }
 }

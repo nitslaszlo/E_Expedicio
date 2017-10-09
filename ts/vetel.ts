@@ -1,3 +1,5 @@
+import { List } from 'linqts';
+
 export class Vetel {
    N: number;
    R: number;
