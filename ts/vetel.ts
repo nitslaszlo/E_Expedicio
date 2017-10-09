@@ -26,4 +26,3 @@ export class Vetel {
       }
    }
 }
-//asdasdasdasdasds
