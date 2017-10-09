@@ -17,8 +17,9 @@ export class Radio {
       const fs: any = require("fs");
       const sorok: any = fs.readFileSync("veetel.txt").toString().split("\r\n");
       while (!fs.EndOfStream) v.push(new Vetel(fs.ReadLine().split(" "), fs.ReadLine()));
-      //   using(StreamReader sr = new StreamReader("veetel.txt"))
- //     { while (!sr.EndOfStream) v.Add(new Vétel(sr.ReadLine().Split(), sr.ReadLine())); }
+      console.log("2. feladat: \n Az első üzemet rögzítője: " + v[0].R + "\n Az utolsó üzenet rögzítője: " + v[length - 1].R);
+//      Console.WriteLine("2. feladat:\nAz első üzenet rögzítője: {0}\nAz utolsó üzenet rögzítője: {1}", v[0].R, v.Last().R);
+
 
    }
 
