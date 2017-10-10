@@ -21,9 +21,21 @@ export class Radio {
       console.log("2. feladat: \n Az első üzemet rögzítője: " + v[0].R + "\n Az utolsó üzenet rögzítője: " + v[length - 1].R);
 
       console.log("3. feladat:");
-      console.log(v.Where(x => x.Ü.Contains("farkas")).Aggregate("", (c, n) => c += string.Format("\n" + n.N + ". nap " + n.R + ". rádióamatőr" + )));
-  //   Console.WriteLine(v.Where(x => x.Ü.Contains("farkas")).Aggregate("", (c, n) => c += String.Format("\n{0}. nap: {1}. rádióamatőr", n.N, n.R)));
-
+      console.log(v.Where(x => x.Ü.Contains("farkas")).Aggregate("", (c, n) => c += string.Format("\n" + n.N + ". nap " + n.R + ". rádióamatőr")));
+      
+    //4. feladat.
+      console.log("4. feladat:");
+       
+      var ki: string[];
+     // ki.push('elem'); - Hozzáadás listához.
+      
+     import fs = require('fs');
+     fs.readFileSync('adaas.txt', 'utf8'); 
+      
+     //7. feladat:
+     console.log("7. feladat:");
+     console.log("Adja meg a nap sorszámát!");
+     var sszN: number; 
    }
 
 }
