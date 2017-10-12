@@ -3,7 +3,16 @@ import * as url from "url";
 import * as fs from "fs";
 import { Vetel } from "./vetel";
 
+
 export class Content {
+    // 6. feladat:
+    static szame(szo: string): boolean {
+        let valasz: boolean = true;
+        for (let i: number = 0; i < szo.length; i++) {
+            if (szo[i] < "0" || szo[i] > "9") valasz = false;
+        }
+        return valasz;
+    }
 
     Content(req: http.ServerRequest, res: http.ServerResponse): void {
         res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
@@ -50,7 +59,8 @@ export class Content {
             res.write((i + 1) + ". nap: " + napok[i] + " rádióamatőr<br>");
         }
 
-        res.write("5. Feladat: <br>");
+        // 5. feladat
+        res.write("\n5. Feladat: <br>");
         const length: number = v.length;
         const ws: fs.WriteStream = fs.createWriteStream("adaas.txt");
         for (let i: number = 1; i < 12; i++) {
@@ -75,6 +85,18 @@ export class Content {
         }
 
         res.write("</pre></form>");
+
+        // 7. feladat:
+        res.write("7. feladat:\nAdja meg a nap sorszámát!\n");
+        res.write('<input name="sszN" type="number">');
+        res.write("7. feladat:\nAdja meg a rádióamatőr sorszámát!\n");
+        res.write('<input name="sszR" type="number">');
+        for (let i: number; i < v.length; i++) {
+            if (v[i].nap === sszN && v[i].radios === sszR) {
+                res.write(v[i].nap + " " + v[i].radios);
+            }
+            else res.write("Nincs ilyen feljegyzés!");
+        }
         res.end();
     }
 }
