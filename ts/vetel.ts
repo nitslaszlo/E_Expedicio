@@ -3,6 +3,7 @@ export class Vetel {
    radios: number;
    uzenet: string;
    azon: string;
+
    constructor(nap: number, radios: number, sor: string) {
       this.azon = nap.toString() + radios.toString();
       this.nap = nap;
