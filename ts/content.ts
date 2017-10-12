@@ -50,6 +50,30 @@ export class Content {
             res.write((i + 1) + ". nap: " + napok[i] + " rádióamatőr<br>");
         }
 
+        res.write("5. Feladat: <br>");
+        const length: number = v.length;
+        const ws: fs.WriteStream = fs.createWriteStream("adaas.txt");
+        for (let i: number = 1; i < 12; i++) {
+            let uzenet: string[] = [];
+            let irva: boolean = false;
+                       for (let k: number = 0; k < length; k++) {
+                if (v[k].nap === i) {
+                    if (!irva) {
+                        irva = true;
+                        uzenet = v[k].uzenet.split("");
+                    } else {
+                        const aktualis: string[] = v[k].uzenet.split("");
+                        for (let q: number = 0; q < 90; q++) {
+                            if (aktualis[q] !== "#") {
+                               uzenet[q] = aktualis[q];
+                            }
+                        }
+                    }
+                }
+            }
+            ws.write(`${i}. nap: ${uzenet.join("")}\r\n`);
+        }
+
         res.write("</pre></form>");
         res.end();
     }
