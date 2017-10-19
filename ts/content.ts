@@ -60,7 +60,6 @@ export class Content {
         }
 
         // 5. feladat
-        res.write("\n5. Feladat: <br>");
         const length: number = v.length;
         const ws: fs.WriteStream = fs.createWriteStream("adaas.txt");
         for (let i: number = 1; i < 12; i++) {
@@ -84,19 +83,38 @@ export class Content {
             ws.write(`${i}. nap: ${uzenet.join("")}\r\n`);
         }
 
-        res.write("</pre></form>");
+        
 
         // 7. feladat:
-        res.write("7. feladat:\nAdja meg a nap sorszámát!\n");
-        res.write('<input name="sszN" type="number">');
-        res.write("7. feladat:\nAdja meg a rádióamatőr sorszámát!\n");
-        res.write('<input name="sszR" type="number">');
-        for (let i: number; i < v.length; i++) {
-            if (v[i].nap === sszN && v[i].radios === sszR) {
+
+        const query: any = url.parse(req.url, true).query; // user input
+        const vazon: number = query.vazon === undefined ? "AB123" : query.vazon;
+        const sorszam: number = query.sorszam === undefined ? "10" : query.sorszam;
+
+        res.write("\n7. feladat:\nAdja meg a nap sorszámát!\n");
+
+        //res.write('<input value="' + sorszam + '" name="sorszam" type="number">');
+
+        res.write("<input type='text' name='sorszam' value=" + `'${sorszam}'"><br>`);
+             
+        res.write("\nAdja meg a rádióamatőr sorszámát!\n");
+        res.write("<input type='text' name='vazon' value=" + `'${vazon}'"><br>`);
+        
+
+        for (let i: number = 0; i < v.length; i++)
+        {
+            //res.write("Na most belépett a for-ba");
+            if (v[i].nap === sorszam && v[i].radios === vazon) {
                 res.write(v[i].nap + " " + v[i].radios);
             }
-            else res.write("Nincs ilyen feljegyzés!");
+            else {
+                res.write("\nNincs ilyen feljegyzés!");
+            }
         }
+
+        res.write('<br><input type="submit">');
+        
+        res.write("</pre></form>");
         res.end();
     }
 }
